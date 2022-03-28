@@ -1,0 +1,31 @@
+@font-face {
+    font-family: '8bit';
+    src: url('../font/DungGeunMo.ttf') format('truetype');
+}
+*{
+    font-family: '8bit', sans-serif;
+    text-align: center;
+
+}
+body{
+    /*background-image: url("../images/JJANGU_SPIN.gif");*/
+}
+div h1{
+    animation: color-change 1s infinite;
+    font-size: 6vw;
+}
+div{
+    vertical-align: middle;
+}
+p{
+    font-size: 3vw;
+}
+p :hover{
+    background-color: #74b9ff;
+}
+
+@keyframes color-change {
+    0% { color: black; }
+    50% { color: grey; }
+    100% { color: black; }
+}

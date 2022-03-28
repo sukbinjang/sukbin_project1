@@ -1,0 +1,41 @@
+plugins {
+    id 'org.springframework.boot' version '2.4.5'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+    id 'war'
+
+}
+
+group = 'kr.sukbin_project1'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+    //lombok
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    // Spring MVC
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    // Spring JDBC
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    // Live reload
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    // For stand-alone Tomcat
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+
+    // JSP (JSTL, EL)
+    providedRuntime 'org.apache.tomcat.embed:tomcat-embed-jasper'
+    runtimeOnly 'javax.servlet:jstl'
+
+    // MariaDB JDBC Driver
+    runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+
+    // OWASP Java Encoder
+    implementation 'org.owasp.encoder:encoder:1.2.+'
+    implementation 'org.owasp.encoder:encoder-jsp:1.2.+'
+    //web socket
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-websocket'
+}
